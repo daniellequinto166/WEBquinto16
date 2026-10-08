@@ -1,0 +1,1571 @@
+/* =========================================================
+   ZAYA GRAND RESERVE
+   MAIN CSS
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    background: #001b16;
+
+    color: #eeeeee;
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =========================================================
+   MAIN WEBSITE CONTAINER
+
+   THIS IS THE IMPORTANT PART.
+
+   The website now occupies the available width.
+========================================================= */
+
+.website {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    background: #001b16;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 72px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    background: transparent;
+
+    transition: all 0.4s ease;
+
+}
+
+
+.header.scrolled {
+
+    background: rgba(0, 25, 20, 0.96);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: #c79a4a;
+
+}
+
+
+.logo-main {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    line-height: 0.7;
+
+}
+
+
+.logo-sub {
+
+    margin-top: 8px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: 2.5px;
+
+    color: #b18b4c;
+
+}
+
+
+/* =========================================================
+   MENU BUTTON
+========================================================= */
+
+.menu-button {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #c89b4c;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav {
+
+    position: absolute;
+
+    top: 72px;
+
+    right: 5%;
+
+    width: 210px;
+
+    padding: 25px;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    background: rgba(0, 24, 19, 0.98);
+
+    border: 1px solid rgba(200, 155, 76, 0.25);
+
+}
+
+
+.nav.show {
+
+    display: flex;
+
+}
+
+
+.nav a {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #d6c9af;
+
+    transition: 0.3s;
+
+}
+
+
+.nav a:hover,
+.nav a.active {
+
+    color: #c99b4d;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 720px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 20, 15, 0.12),
+            rgba(0, 20, 15, 0.3)
+        ),
+
+        url("../assets/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* DARK OVERLAY */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.25)
+        );
+
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+
+    max-width: 900px;
+
+    text-align: center;
+
+}
+
+
+.hero-label {
+
+    margin-bottom: 15px;
+
+    color: #c29a51;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.hero h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(80px, 12vw, 180px);
+
+    font-weight: 500;
+
+    line-height: 0.7;
+
+    color: #d19f4f;
+
+    text-shadow:
+
+        0 3px 12px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.hero-subtitle {
+
+    margin-top: 25px;
+
+    color: #c19a53;
+
+    font-size: 10px;
+
+    letter-spacing: 6px;
+
+}
+
+
+.hero-description {
+
+    max-width: 500px;
+
+    margin: 25px auto;
+
+    color: #e0d8ca;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   GOLD BUTTON
+========================================================= */
+
+.gold-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 25px;
+
+    border: 1px solid #b78d43;
+
+    color: #c8a25b;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition: all 0.35s ease;
+
+}
+
+
+.gold-button:hover {
+
+    background: #c19a53;
+
+    color: #001b16;
+
+}
+
+
+/* =========================================================
+   STORY SECTION
+========================================================= */
+
+.story-section {
+
+    width: 100%;
+
+    min-height: 600px;
+
+    padding: 100px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #001e18;
+
+}
+
+
+.story-container {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: clamp(40px, 8vw, 120px);
+
+}
+
+
+/* STORY IMAGE */
+
+.story-image {
+
+    flex: 1;
+
+    max-width: 480px;
+
+    height: 500px;
+
+    overflow: hidden;
+
+}
+
+
+.story-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+
+}
+
+
+.story-image:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* STORY TEXT */
+
+.story-text {
+
+    flex: 1;
+
+    max-width: 550px;
+
+}
+
+
+.section-label {
+
+    margin-bottom: 20px;
+
+    color: #a17d42;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    line-height: 1.6;
+
+}
+
+
+.story-text h2 {
+
+    color: #c59b51;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(32px, 4vw, 58px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+}
+
+
+.story-description {
+
+    max-width: 450px;
+
+    margin-top: 25px;
+
+    color: #aaa69b;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+.ornament {
+
+    margin-top: 35px;
+
+    color: #a78343;
+
+    font-size: 30px;
+
+}
+
+
+/* =========================================================
+   RESERVE SECTION
+========================================================= */
+
+.reserve-section {
+
+    width: 100%;
+
+    min-height: 650px;
+
+    padding: 100px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        radial-gradient(
+            circle at 70% 50%,
+            rgba(0, 70, 50, 0.5),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            to bottom,
+            #001e18,
+            #000b09
+        );
+
+}
+
+
+.reserve-container {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+}
+
+
+/* RESERVE TEXT */
+
+.reserve-text {
+
+    flex: 1;
+
+    max-width: 550px;
+
+}
+
+
+.reserve-text h2 {
+
+    margin-bottom: 25px;
+
+    color: #e2ded4;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(45px, 5vw, 80px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+}
+
+
+.reserve-description {
+
+    max-width: 420px;
+
+    margin-bottom: 30px;
+
+    color: #a8a69c;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+/* RESERVE IMAGE */
+
+.reserve-image {
+
+    flex: 1;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.reserve-image img {
+
+    width: 100%;
+
+    max-width: 550px;
+
+    height: 550px;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================================================
+   COCKTAIL SECTION
+========================================================= */
+
+.cocktail-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 700px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+
+.cocktail-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.7)
+        ),
+
+        url("../assets/g3.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    transform: scale(1.02);
+
+}
+
+
+.cocktail-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    min-height: 700px;
+
+    padding: 100px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+}
+
+
+/* COCKTAIL IMAGE */
+
+.cocktail-image {
+
+    flex: 1;
+
+    max-width: 600px;
+
+    height: 550px;
+
+}
+
+
+.cocktail-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* COCKTAIL TEXT */
+
+.cocktail-text {
+
+    flex: 1;
+
+    max-width: 500px;
+
+}
+
+
+.cocktail-text h2 {
+
+    color: #eee8dd;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(45px, 5vw, 75px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    margin-bottom: 25px;
+
+}
+
+
+.cocktail-text > p:not(.section-label) {
+
+    margin-bottom: 30px;
+
+    color: #c5c0b6;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-section {
+
+    width: 100%;
+
+    padding: 100px 7%;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #003126,
+            #001d17 50%,
+            #00271f
+        );
+
+}
+
+
+.gallery-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+
+.gallery-label {
+
+    text-align: center;
+
+    margin-bottom: 5px;
+
+    color: #a18752;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.gallery-container > h2 {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    color: #b98b42;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   FLEX GALLERY
+========================================================= */
+
+.gallery {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+}
+
+
+.gallery-item {
+
+    flex: 1 1 calc(33.333% - 15px);
+
+    min-width: 200px;
+
+    height: 230px;
+
+    overflow: hidden;
+
+}
+
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    width: 100%;
+
+    padding: 80px 8% 25px;
+
+    background: #001e18;
+
+}
+
+
+.footer-container {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+}
+
+
+/* FOOTER BRAND */
+
+.footer-brand {
+
+    flex: 1;
+
+}
+
+
+.footer-logo {
+
+    color: #c09448;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 60px;
+
+    font-weight: 500;
+
+    line-height: 0.7;
+
+}
+
+
+.footer-brand span {
+
+    display: block;
+
+    margin-top: 15px;
+
+    color: #927540;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* DIVIDER */
+
+.footer-divider {
+
+    width: 1px;
+
+    min-height: 100px;
+
+    background: rgba(191, 153, 80, 0.35);
+
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.footer-title {
+
+    margin-bottom: 8px;
+
+    color: #b38b4a;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.footer-links a {
+
+    color: #8e9188;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+
+.footer-links a:hover {
+
+    color: #c29a52;
+
+}
+
+
+/* FOOTER SOCIAL */
+
+.footer-social {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.footer-social p {
+
+    color: #8c9087;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+
+    margin-top: 60px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(190, 150, 75, 0.15);
+
+    text-align: center;
+
+    color: #626c65;
+
+    font-size: 9px;
+
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+.story-section,
+.reserve-section,
+.cocktail-section,
+.gallery-section,
+.footer {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1s ease;
+
+}
+
+
+.story-section.visible,
+.reserve-section.visible,
+.cocktail-section.visible,
+.gallery-section.visible,
+.footer.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   LARGE SCREEN
+========================================================= */
+
+@media (min-width: 1200px) {
+
+
+    .header {
+
+        padding-left: 8%;
+
+        padding-right: 8%;
+
+    }
+
+
+    .story-section {
+
+        padding-left: 10%;
+
+        padding-right: 10%;
+
+    }
+
+
+    .reserve-section {
+
+        padding-left: 10%;
+
+        padding-right: 10%;
+
+    }
+
+
+    .cocktail-container {
+
+        padding-left: 10%;
+
+        padding-right: 10%;
+
+    }
+
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+
+    .hero {
+
+        min-height: 650px;
+
+    }
+
+
+    .story-container {
+
+        gap: 40px;
+
+    }
+
+
+    .story-image {
+
+        height: 400px;
+
+    }
+
+
+    .reserve-container {
+
+        gap: 30px;
+
+    }
+
+
+    .reserve-image img {
+
+        height: 450px;
+
+    }
+
+
+    .cocktail-container {
+
+        gap: 35px;
+
+    }
+
+
+    .cocktail-image {
+
+        height: 450px;
+
+    }
+
+
+    .gallery-item {
+
+        flex-basis: calc(50% - 15px);
+
+    }
+
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+
+    /* HEADER */
+
+    .header {
+
+        height: 65px;
+
+        padding: 0 20px;
+
+    }
+
+
+    .nav {
+
+        top: 65px;
+
+        right: 20px;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 600px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 90px;
+
+    }
+
+
+    .hero-label {
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .hero-description {
+
+        width: 90%;
+
+        font-size: 11px;
+
+    }
+
+
+    /* STORY */
+
+    .story-section {
+
+        min-height: auto;
+
+        padding: 70px 25px;
+
+    }
+
+
+    .story-container {
+
+        flex-direction: column;
+
+        gap: 40px;
+
+    }
+
+
+    .story-image {
+
+        width: 100%;
+
+        max-width: 450px;
+
+        height: 400px;
+
+        flex: none;
+
+    }
+
+
+    .story-text {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .story-text h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .story-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .ornament {
+
+        font-size: 25px;
+
+    }
+
+
+    /* RESERVE */
+
+    .reserve-section {
+
+        min-height: auto;
+
+        padding: 70px 25px;
+
+    }
+
+
+    .reserve-container {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .reserve-text {
+
+        width: 100%;
+
+    }
+
+
+    .reserve-text h2 {
+
+        font-size: 55px;
+
+    }
+
+
+    .reserve-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .reserve-image {
+
+        width: 100%;
+
+        min-height: 400px;
+
+    }
+
+
+    .reserve-image img {
+
+        width: 100%;
+
+        height: 400px;
+
+    }
+
+
+    /* COCKTAIL */
+
+    .cocktail-section {
+
+        min-height: auto;
+
+    }
+
+
+    .cocktail-container {
+
+        min-height: auto;
+
+        padding: 70px 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .cocktail-image {
+
+        width: 100%;
+
+        max-width: 500px;
+
+        height: 400px;
+
+        flex: none;
+
+    }
+
+
+    .cocktail-text {
+
+        width: 100%;
+
+    }
+
+
+    .cocktail-text h2 {
+
+        font-size: 55px;
+
+    }
+
+
+    /* GALLERY */
+
+    .gallery-section {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .gallery {
+
+        gap: 8px;
+
+    }
+
+
+    .gallery-item {
+
+        flex: 1 1 calc(50% - 8px);
+
+        min-width: 0;
+
+        height: 160px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+
+        padding: 60px 25px 20px;
+
+    }
+
+
+    .footer-container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+
+    .footer-divider {
+
+        width: 100%;
+
+        min-height: 1px;
+
+        height: 1px;
+
+    }
+
+
+    .footer-brand,
+    .footer-links,
+    .footer-social {
+
+        width: 100%;
+
+        align-items: center;
+
+    }
+
+
+    .footer-logo {
+
+        font-size: 55px;
+
+    }
+
+
+}
